@@ -1,0 +1,25 @@
+body{
+    background-color:darkgoldenrod;
+}    
+tr{
+    width: 100%;
+}
+th{
+    
+    font-size: 3em;
+}
+td{
+    font-size: 1em;
+}
+table{
+    margin: 3em;
+    padding: 1em;
+    width: 90%;
+    background-color:gray;
+}
+.error{
+    color:red;
+}
+.delete{
+    text-align: right;
+}
