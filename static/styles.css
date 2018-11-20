@@ -1,11 +1,12 @@
 body{
     background-color:darkgoldenrod;
-}    
+} 
+
+
 tr{
     width: 100%;
 }
 th{
-    
     font-size: 3em;
 }
 td{
@@ -17,9 +18,24 @@ table{
     width: 90%;
     background-color:gray;
 }
+
+
 .error{
     color:red;
 }
 .delete{
+    text-align: right;
+}
+.hid{
+    visibility: hidden;
+}
+
+#login{
+    visibility: visible;
+}
+#logout{
+    visibility: hidden;
+}
+.user{
     text-align: right;
 }

@@ -7,8 +7,12 @@
 <body>
     <header>
         <nav>
+            <a href="http://127.0.0.1:5000/index">User Index</a>
             <a href="http://127.0.0.1:5000/addblog">Add Blog</a>
             <a href="http://127.0.0.1:5000/blog">View Blogs</a>
+            <a id='login' class='user' href="http://127.0.0.1:5000/login">Login</a>
+            <a id='logout' class='user' href="http://127.0.0.1:5000/login">Logout</a>
+            <a href="http://127.0.0.1:5000/signup">Sign Up</a>
         </nav>
     </header>
     {% block content %}
