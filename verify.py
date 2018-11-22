@@ -7,10 +7,7 @@ def create(username, password, v_pwd):
     pwd_error = verify_pwd(v_pwd, password)
     username_error = user_chk(username)
         
-    if (pwd_error == "" and username_error == ""):
-        return True
-    else:
-        return username_error, pwd_error
+    return username_error, pwd_error
 
 def user_chk(username):
     if username == "":

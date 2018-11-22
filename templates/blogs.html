@@ -5,21 +5,25 @@
     
     
     
-    {% if blogs|length == 0 %}
-    <p>No blogs yet</p>
-    {% else %}
+    
 
         
         {% for blog in blogs %}
         <table >
-            <tr><th><a href="http://127.0.0.1:5000/blog?blog_id={{blog.id}}">{{blog.title}}</a></th>
+            <tr><th class="left"><a href="http://127.0.0.1:5000/blog?blog_id={{blog.id}}">{{blog.title}}</a></th>
+                <th class="right">{% for user in users %}
+                        {% if user.id == blog.user_id %}
+                            by: {{user.name}}
+                        {% endif %}
+                    {% endfor %}
+                </th>
             </tr>
             <tr><td>{{blog.body}}</td></tr>
         </table>
         {% endfor %}
         <br>
 
-    {% endif %}
+    
 
     <hr />
 

@@ -4,12 +4,17 @@
 
 
         <table >
-            <tr><th>{{blog.title}}</th>
-                <td class='delete'><form method="POST" action="/delete-blog" style="display:inline-block;">
-                    <input type="hidden" name="blog-id" value="{{blog.id}}" />
-                    <input class='hid' type="submit" value="Delete" />
-                </form></td>
-            </tr>
+            <tr><th class="left">{{blog.title}}</th><th class="right">{{name}}</th></tr>
+            {%if ses == blog.user_id %}
+                <tr class='left'>
+                <td class='delete' >
+                    <form method="POST" action="/delete-blog">
+                        <input type="hidden" name="blog-id" value="{{blog.id}}" />
+                        <input type="submit" value="Delete" />
+                    </form>
+                </td>
+                </tr>
+            {%endif%}
             <tr><td>{{blog.body}}</td></tr>
         </table>
         <br>

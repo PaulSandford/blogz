@@ -3,28 +3,22 @@
 {% block content %}
     
     
-    <h1>{{user.name}}</h1>
+    <h1>{{name}}</h1>
     
-    {% if blogs|length == 0 %}
-    <p>No blogs yet</p>
     
-    {% else %}
+    
 
         
         {% for blog in blogs %}
         <table >
-            <tr><th><a href="http://127.0.0.1:5000/blog?blog_id={{blog.id}}">{{blog.title}}</a></th>
-                <td class='delete'><form  method="POST" action="/delete-blog" style="display:intrne-block;">
-                    <input type="hidden" name="blog-id" value="{{blog.id}}" />
-                    <input class='hid' type="submit" value="Delete" />
-                </form></td>
+            <tr><th class="left"><a href="http://127.0.0.1:5000/blog?blog_id={{blog.id}}">{{blog.title}}</a></th>
             </tr>
             <tr><td>{{blog.body}}</td></tr>
         </table>
         {% endfor %}
         <br>
 
-    {% endif %}
+    
 
     <hr />
 

@@ -2,15 +2,19 @@ body{
     background-color:darkgoldenrod;
 } 
 
-
+nav{
+    width: 100%;
+}
 tr{
     width: 100%;
+    margin-bottom: 1em;
 }
 th{
     font-size: 3em;
 }
 td{
     font-size: 1em;
+    
 }
 table{
     margin: 3em;
@@ -20,22 +24,23 @@ table{
 }
 
 
+.fr{
+    float:right;
+}
 .error{
     color:red;
 }
 .delete{
-    text-align: right;
+    width: 100%;
 }
 .hid{
     visibility: hidden;
 }
 
-#login{
-    visibility: visible;
+.right{
+    text-align:right;    
 }
-#logout{
-    visibility: hidden;
-}
-.user{
-    text-align: right;
+
+.left{
+    text-align:left;
 }

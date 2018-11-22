@@ -12,7 +12,7 @@
         
         {% for user in users %}
         <table >
-            <tr><th><a href="http://127.0.0.1:5000/singleUser?user_id={{user.id}}">{{user.name}}</a></th>
+            <tr><th class="left"><a href="http://127.0.0.1:5000/singleUser?user_id={{user.id}}">{{user.name}}</a></th>
             </tr>
         </table>
         {% endfor %}
