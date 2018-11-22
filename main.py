@@ -31,6 +31,7 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(16))#distinct = True ??
     password = db.Column(db.String(32))
+    
     blogs = db.relationship('Blog', backref='user', lazy=True)
 
     def __init__(self, name, password):
@@ -177,12 +178,16 @@ def add_blog():
                 user = User.query.get(session['id'])
                 blog = Blog.query.get(new_blog.id)
                 return render_template('singlepost.html', title=blog.title, ses=session['id'], blog=blog, name=user.name)
-
+    
     db.session.add(new_blog)
     db.session.commit()
     #add a query request for redirect
     user = User.query.get(session['id'])
     blog = Blog.query.get(new_blog.id)
+    #attempted to create a list of blogz under the user
+    #blogs = user.blogz
+    #user.blogz = blogs.append(new_blog.id)
+    #db.session.commit()
     return render_template('singlepost.html', title=blog.title, ses=session['id'], blog=blog, name=user.name)
 
 @app.route('/delete-blog', methods=['POST'])
